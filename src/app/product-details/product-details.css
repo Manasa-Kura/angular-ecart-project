@@ -1,0 +1,43 @@
+.details-container {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+}
+
+.left img {
+  width: 400px;
+}
+
+.right {
+  flex: 1;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.stock {
+  color: green;
+}
+
+.out {
+  color: red;
+}
+
+.color {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  border-radius: 50%;
+}
+
+.red { background: red; }
+.green { background: green; }
+.black { background: black; }
+
+.cart-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+}

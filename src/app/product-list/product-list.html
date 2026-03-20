@@ -1,0 +1,22 @@
+<div class="product-grid">
+
+  <!-- Show products -->
+  <ng-container *ngIf="filteredProducts.length > 0; else noProducts">
+
+    <app-product-card
+  *ngFor="let p of filteredProducts"
+  [product]="p"
+  (click)="viewProduct(p)"
+  (cartEvent)="addProduct($event)">
+</app-product-card>
+
+  </ng-container>
+
+  <!-- No products template -->
+  <ng-template #noProducts>
+    <p class="no-data">No Products Found</p>
+  </ng-template>
+
+</div>
+
+<h3>Cart Items: {{ cartService.getCart().length }}</h3>

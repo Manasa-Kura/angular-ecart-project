@@ -1,19 +1,26 @@
 .details-container {
   display: flex;
-  gap: 40px;
-  padding: 40px;
+  gap: 20px;
+  align-items: flex-start;
 }
 
 .left img {
-  width: 400px;
+  width: 150px;
+  height: auto;
 }
 
 .right {
   flex: 1;
+  color: black; /* 🔥 IMPORTANT */
+}
+
+/* Fix spacing */
+h2 {
+  margin: 10px 0;
 }
 
 .price {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
 }
 
@@ -25,19 +32,3 @@
   color: red;
 }
 
-.color {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  margin: 5px;
-  border-radius: 50%;
-}
-
-.red { background: red; }
-.green { background: green; }
-.black { background: black; }
-
-.cart-btn {
-  margin-top: 20px;
-  padding: 10px 20px;
-}

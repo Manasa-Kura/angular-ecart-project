@@ -1,20 +1,17 @@
-import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CartService } from '../cart.service/cart.service';
 @Component({
   selector: 'app-product-details',
-  standalone: true,
-  imports:[CommonModule],
+  standalone: true, 
+  imports: [CommonModule],
   templateUrl: './product-details.html',
   styleUrl: './product-details.css'
 })
 export class ProductDetails {
-
-  productId: any;
-  product:any;
-  constructor(private route: ActivatedRoute){
-    this.productId = this.route.snapshot.paramMap.get('id');
-    console.log(this.productId);
+  @Input() product: any;
+  constructor(private cartService: CartService){}
+  addProduct(product: any){
+    this.cartService.addToCart(product);
   }
-
 }

@@ -1,3 +1,4 @@
+
 <div class="details-container" *ngIf="product">
 
   <div class="left">
@@ -22,7 +23,9 @@
     <span class="color green"></span>
     <span class="color black"></span>
 
-    <button class="cart-btn">Add to Cart</button>
+    <button class="cart-btn" (click)="addProduct(product)">
+      Add to Cart
+    </button>
 
   </div>
 

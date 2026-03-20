@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   selector: 'app-product-list',
   standalone: true,
   imports: [CommonModule, ProductCard],
-  templateUrl: './product-list.html',   // ✅ correct
+  templateUrl: './product-list.html',   
   styleUrl: './product-list.css'
 })
 export class ProductList {
@@ -43,7 +43,7 @@ export class ProductList {
   viewProduct(product: any){
     this.router.navigate(['/product', product.id]);
   }
-  // ✅ Add this getter
+ 
   get filteredProducts(){
     if(!this.searchText){
       return this.products;
